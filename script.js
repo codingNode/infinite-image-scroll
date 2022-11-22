@@ -14,12 +14,14 @@ function setAttributes(element, attributes)
 
 function imgLoaded()
 {
+    const loader = document.getElementById('loader')
     console.log('total ', totalEntries)
     imagesLoaded++;
     console.log(imagesLoaded)
     if(imagesLoaded === totalEntries)
     {
         ready = true;
+        loader.hidden = true;
         console.log('ready=',ready)
     }
     else
